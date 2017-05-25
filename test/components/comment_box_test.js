@@ -2,7 +2,7 @@ import { renderComponent, expect } from '../test_helper';
 import CommentBox from '../../src/components/comment_box';
 
 describe('CommentBox', () => {
-    let component;
+    let component;  //undefined
 
     beforeEach(() => {
         component = renderComponent(CommentBox);
