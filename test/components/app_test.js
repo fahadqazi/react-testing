@@ -10,5 +10,6 @@ describe('App', () => {
 
   it('shows a comment box', () => {
     expect(component.find('.commentBox')).to.exist;
+    //   expect(component.find('textarea')).to.exists;
   });
 });

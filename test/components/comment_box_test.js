@@ -17,6 +17,20 @@ describe('CommentBox', () => {
     it('has a button', () => {
         expect(component.find('button')).to.exist;
     });
+
+    describe('entering some text', () => {
+        beforeEach(() => {
+            component.find('textarea').simulate('change', 'new comment');
+        });
+
+        it('shows that text is the text area', () => {
+            expect(component.find('textarea')).to.have.value('new comment');
+        });
+        it('clears text area after clicking submit button', () => {
+            component.simulate('submit');
+            expect(component.find('textarea')).to.have.value('');
+        });
+    });
 });
 
 /**
