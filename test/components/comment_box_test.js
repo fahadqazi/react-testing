@@ -2,16 +2,19 @@ import { renderComponent, expect } from '../test_helper';
 import CommentBox from '../../src/components/comment_box';
 
 describe('CommentBox', () => {
+    let component;
+
+    beforeEach(() => {
+        component = renderComponent(CommentBox);
+    });
+
     it('has the class commentBox', () => {
-        const component = renderComponent(CommentBox);
         expect(component).to.have.class('commentBox');
     });
     it('has a text area', () => {
-        const component = renderComponent(CommentBox);
         expect(component.find('textarea')).to.exit;
     });
     it('has a button', () => {
-        const component = renderComponent(CommentBox);
         expect(component.find('button')).to.exist;
     });
 });
