@@ -1,4 +1,4 @@
-import { expect } from '../test_helper';
+import {expect} from '../test_helper';
 import commentReducer from '../../src/reducers/comments';
 import { SAVE_COMMENT } from '../../src/actions/types';
 
